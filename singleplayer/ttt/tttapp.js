@@ -1,5 +1,6 @@
 const SIZE = 3;
 const result_p = document.getElementById("result");
+const newgame_p = document.getElementById("ng");
 const tl = [document.getElementById("tl"), [0,0]];
 const tm = [document.getElementById("tm"), [0,1]];
 const tr = [document.getElementById("tr"), [0,2]];
@@ -11,14 +12,27 @@ const bm = [document.getElementById("bm"), [2,1]];
 const br = [document.getElementById("br"), [2,2]];
 const list = [tl, tm, tr, ml, mm, mr, bl, bm, br];
 const scores = [0, -1, 1];
+const blank = "./ttt/images/blank.png";
+const p1 = "./ttt/images/X.png";
+const p2 = "./ttt/images/O.png";
 let board = [[0,0,0],[0,0,0],[0,0,0]];
 let len = 9;
-let p1 = "./ttt/images/X.png";
-let p2 = "./ttt/images/O.png";
-let playerTurn = Math.random() < 0.5;
+let playerTurn = false;
 
-if (!playerTurn) {
-	setTimeout(() => bestMove(), 200);
+newGame()
+
+function newGame() {
+	for (let i = 0; i < list.length; i++) {
+		list[i][0].src = blank;
+	}
+	board = [[0,0,0],[0,0,0],[0,0,0]];
+	len = 9
+	result_p.innerHTML = "Who will win?"
+	if (Math.random() < 0.5) {
+		setTimeout(() => bestMove(), 200);
+	} else {
+		playerTurn = true;
+	}
 }
 
 function changeResult() {
@@ -121,6 +135,7 @@ function clicked(obj) {
 	}
 }
 
+newgame_p.addEventListener('click', function() {newGame();});
 tl[0].addEventListener('click', function() {clicked(tl);});
 tm[0].addEventListener('click', function() {clicked(tm);});
 tr[0].addEventListener('click', function() {clicked(tr);});
