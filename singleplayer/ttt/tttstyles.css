@@ -82,13 +82,13 @@ header > h1 {
 	background: white;
 }
 
-.red-glow {
-	box-shadow: 0 0 10px red;
-	transition: all 0.3s ease;
-}
-
 #home {
 	color: white;
 	margin: 10px;
 	display: inline-block;
+}
+
+.red-glow {
+	box-shadow: 0 0 10px red;
+	transition: all 0.3s ease;
 }

@@ -89,9 +89,8 @@ header > h1 {
 }
 
 #home {
-	text-align: center;
 	color: white;
-	margin-top: 10px;
+	margin: 10px;
 	display: inline-block;
 }
 
