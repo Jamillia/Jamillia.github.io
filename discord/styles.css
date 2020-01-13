@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Times New Roman", Times, serif;
+}
+
+header > h1 {
+	padding: 10px;
+	background: #999999;
+	text-align: center;
+}
+
+body {
+	background: #007799;
+}
+
+hr {
+	border-color: black;
+}
+
+img {
+	width: 700px;
+}
+
+#home {
+	border: 1px solid black;
+	display: inline-block;
+	color: black;
+	font-weight: bold;
+	padding: 5px;
+	text-decoration: none;
+}
+
+#reqs {
+	margin: 10px 20px;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#list1 {
+	margin: 10px 35px;
+}
+
+.downloads {
+	color: lime;
+	text-decoration: none;
+}
+
+.step1 {
+	margin-left: 10px;
+}
+
+.head {
+	margin: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.steps > p {
+	margin: 10px 20px;
+}
+
+#pipinstall {
+	margin: 5px 40px;
+}
